@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            button{
+                background-color: #4CAF50;
+                color: white;
+                padding: 15px 32px;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Change Page Color</h1>
+        <button id="changeColorBtn">Change Page Color</button>
+        <script>
+            $("#changeColorBtn").click(function(){
+                var colors = ["#FFC107", "8BC34A", "#9C27B0"];
+                var randomColor = colors[Math.floor(Math.random()*colors.length)];
+                $("body").css("background-color", randomColor);
+            });
+        </script>
+    </body>
+</html>
